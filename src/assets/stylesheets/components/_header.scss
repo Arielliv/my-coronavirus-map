@@ -4,11 +4,13 @@ header {
   color: $white;
   background-color: $gatsby-purple;
 
-  .container {
+  .header-left,.header-right {
     display: flex;
     justify-content: space-between;
     height: 2.5em;
     line-height: 2.5em;
+    margin: 0;
+    padding: 0 2.5em;
   }
 
   ul {
@@ -28,8 +30,7 @@ header {
     padding: 0 .5em;
   }
 
-  p {
-    font-size: 1.2em;
+  h2 {
     font-weight: bold;
     margin: 0;
   }

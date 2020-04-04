@@ -4,6 +4,7 @@
   "version": "0.2.2",
   "author": "Colby Fayock <hello@colbyfayock.com>",
   "dependencies": {
+    "axois": "0.0.1-security",
     "gatsby": "^2.19.43",
     "gatsby-plugin-react-helmet": "^3.1.23",
     "gatsby-plugin-react-leaflet": "2.0.12",
@@ -11,6 +12,7 @@
     "gatsby-plugin-sass": "^2.1.30",
     "gatsby-source-filesystem": "^2.1.55",
     "leaflet": "^1.6.0",
+    "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
@@ -33,7 +35,8 @@
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1",
-    "prettier-eslint-cli": "^5.0.0"
+    "prettier-eslint-cli": "^5.0.0",
+    "react-odometerjs": "^2.1.1"
   },
   "keywords": [
     "gatsby",

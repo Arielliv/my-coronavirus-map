@@ -1,0 +1,64 @@
+section {
+  &.section-left {
+    background-color: #e0e0e0;
+    text-align: center;
+  }
+  &.section-left:after {
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .box {
+    background-color: #fbfbfb;
+    margin: 4px 4px;
+    border-radius: 5px;
+    border: 1px solid #bfbdbd;
+    padding: 5px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .box:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .box:last-child{
+    padding: 0;
+  }
+
+  .total-number {
+    margin: 10px 0;
+    font-size: 40px;
+  }
+
+  .countries {
+    overflow: scroll;
+    max-height: 63vh;
+
+    .countries-item {
+      list-style-type: none;
+      display: block;
+      padding: 0 2.5em 10px 2.5em;
+      border-bottom: 1px solid #bfbdbd;
+      text-align: start;
+
+      .country-title {
+        display: inline-block;
+        padding-right: 5px;
+      }
+      .country-cases {
+        display: inline-block;
+        color: red;
+      }
+    }
+  }
+
+  .last-update {
+  }
+}

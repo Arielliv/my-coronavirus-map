@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const useRefEffect = ({ effect, ref = {} }) => {
   useEffect(() => {
     effect( ref.current );
-  }, [effect, ref]);
+  }, [ref]);
 };
 
 export default useRefEffect;
