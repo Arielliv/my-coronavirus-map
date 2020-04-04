@@ -13,6 +13,7 @@ const LOCATION = {
 const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 2;
 let geoJsonLayers = {};
+
 export const TotalsContext = React.createContext(null);
 
 export const updateMap = (geoJsonLayersData, map) => {

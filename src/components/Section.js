@@ -3,11 +3,19 @@ import "assets/stylesheets/application.scss";
 import { TotalsContext } from "../pages/index";
 import _ from "lodash";
 import "odometer/themes/odometer-theme-default.css";
-import loadable from '@loadable/component'
-const Odometer = loadable(() => import('react-odometerjs'));
+import loadable from "@loadable/component";
+const Odometer = loadable(() => import("react-odometerjs"));
 
 export const Section = () => {
-  const { totals, countries } = useContext(TotalsContext);
+  const { totals, countries } = useContext(TotalsContext) || {
+    totals: {},
+    countries: {}
+  };
+
+  if (typeof window === "undefined" || !window.document) {
+    return <div />;
+  }
+
   const dtf = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "short",
