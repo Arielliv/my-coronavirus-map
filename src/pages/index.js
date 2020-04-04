@@ -94,7 +94,7 @@ const IndexPage = () => {
 
         const html = `
           <span class="icon-marker">
-            <span class="icon-marker-tooltip">
+            <span class="icon-marker-tooltip icon-marker-tooltip-${country}">
               <h2>${country}</h2>
               <ul>
                 <li><strong>Confirmed:</strong> ${cases}</li>
@@ -107,13 +107,25 @@ const IndexPage = () => {
           </span>
         `;
 
-        return L.marker(latlng, {
+        const marker = L.marker(latlng, {
           icon: L.divIcon({
             className: "icon",
             html
           }),
           riseOnHover: true
         });
+
+        marker.on("click", function(e) {
+          const elem = document.getElementsByClassName(
+            `icon-marker-tooltip-${country}`
+          )[0];
+          const arr = elem.className.split(" ");
+          if (arr.indexOf(`mobile-active`) == -1) {
+            elem.className += " mobile-active";
+          }
+        });
+
+        return marker;
       }
     });
 

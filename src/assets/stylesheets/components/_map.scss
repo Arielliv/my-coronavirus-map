@@ -45,10 +45,22 @@
   border-radius: 100%;
   box-shadow: 0 2px 5px rgba(black, 0.9);
 
-  &:hover, &:active, &:focus {
+  & {
+    .mobile-active {
+      @media (min-width: 320px) and (max-width: 480px) {
+        display: block;
+      }
+    }
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
     .icon-marker-tooltip {
       display: block;
     }
+
+
   }
 }
 
@@ -69,7 +81,7 @@
     position: absolute;
     bottom: -0.6em;
     left: 50%;
-    content: '';
+    content: "";
     width: 1.4em;
     height: 1.4em;
     background-color: $blue-grey-900;
