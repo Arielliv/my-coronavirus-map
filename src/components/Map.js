@@ -3,10 +3,14 @@ import PropTypes from "prop-types";
 import { Map as BaseMap, TileLayer, ZoomControl } from "react-leaflet";
 
 import { isDomAvailable } from "lib/util";
-import {useConfigureLeaflet, useMapServices, useRefEffect} from '../hooks';
-import { useInterval } from "../hooks/useInterval";
+import {
+  useConfigureLeaflet,
+  useMapServices,
+  useRefEffect,
+  useInterval
+} from "../hooks";
 
-export const Map = props => {
+const Map = props => {
   const {
     children,
     className,
@@ -19,8 +23,8 @@ export const Map = props => {
 
   useConfigureLeaflet();
 
-  useRefEffect({ref: mapRef, effect: mapEffect});
-  useInterval(() => mapEffect(mapRef.current),2000);
+  useRefEffect({ ref: mapRef, effect: mapEffect });
+  useInterval(() => mapEffect(mapRef.current), 2000);
 
   const services = useMapServices({
     names: ["OpenStreetMap"]
@@ -64,3 +68,5 @@ Map.propTypes = {
   defaultBaseMap: PropTypes.string,
   mapEffect: PropTypes.func
 };
+
+export default Map;

@@ -6,7 +6,8 @@ import "assets/stylesheets/application.scss";
 
 import Header from "components/Header";
 import Section from "components/Section";
-export const Layout = ({ children, pageName }) => {
+
+const Layout = ({ children, pageName }) => {
   let className = "";
 
   if (pageName) {
@@ -33,3 +34,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   pageName: PropTypes.string
 };
+
+export default Layout;

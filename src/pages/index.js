@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import L from "leaflet";
 import axios from "axios";
 import _ from "lodash";
-import { Layout } from "../components/Layout";
-import { Map } from "../components/Map";
+import Layout from "../components/Layout";
+import Map from "../components/Map";
 import Helmet from "react-helmet/es/Helmet";
 
 const LOCATION = {
