@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "assets/stylesheets/application.scss";
-import { TotalsContext } from "pages/index";
+import { TotalsContext } from "../pages/index";
 import _ from "lodash";
 import "odometer/themes/odometer-theme-default.css";
 import loadable from '@loadable/component'
-const Odometer = loadable(() => import('react-odometerjs'))
+const Odometer = loadable(() => import('react-odometerjs'));
 
 export const Section = () => {
   const { totals, countries } = useContext(TotalsContext);
