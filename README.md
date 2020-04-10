@@ -50,30 +50,30 @@ npm run develop
 
 
 <details>
-<main>In case of error</main>
+    <summary>In case of error</summary>
 
-	```shell
-	enerating development JavaScript bundle failed
-
-	Missing binding /Users/ariell/Projects/coronavirus/new/my-coronavirus-map/node_modules/node-sass/vendor/darwin-x64-64/binding.node
-	Node Sass could not find a binding for your current environment: OS X 64-bit with Node.js 10.x
-
-	Found bindings for the following environments:
-	  - OS X 64-bit with Node.js 12.x
-
-	This usually happens because your environment has changed since running `npm install`.
-	Run `npm rebuild node-sass` to download the binding for your current environment.
-
-	File: src/assets/stylesheets/application.scss
-
-	failed Building development bundle - 6.447s
-	```
-	
-In that case run 
-
-```shell 
-npm rebuild node-sass
-```
+        ```shell
+        enerating development JavaScript bundle failed
+    
+        Missing binding /Users/ariell/Projects/coronavirus/new/my-coronavirus-map/node_modules/node-sass/vendor/darwin-x64-64/binding.node
+        Node Sass could not find a binding for your current environment: OS X 64-bit with Node.js 10.x
+    
+        Found bindings for the following environments:
+          - OS X 64-bit with Node.js 12.x
+    
+        This usually happens because your environment has changed since running `npm install`.
+        Run `npm rebuild node-sass` to download the binding for your current environment.
+    
+        File: src/assets/stylesheets/application.scss
+    
+        failed Building development bundle - 6.447s
+        ```
+    	
+    In that case run 
+    
+        ```shell 
+        npm rebuild node-sass
+        ```
 </detials>
 
 
