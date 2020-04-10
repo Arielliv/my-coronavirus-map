@@ -6,7 +6,7 @@ import "odometer/themes/odometer-theme-default.css";
 import loadable from "@loadable/component";
 const Odometer = loadable(() => import("react-odometerjs"));
 
-export const Section = () => {
+const Section = () => {
   const { totals, countries } = useContext(TotalsContext) || {
     totals: {},
     countries: {}
