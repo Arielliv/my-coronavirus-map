@@ -74,7 +74,7 @@ npm run develop
         ```shell 
         npm rebuild node-sass
         ```
-</detials>
+</details>
 
 
 If all goes as planned, your server should start and you should now be able to see your basic mapping app in your browser!
