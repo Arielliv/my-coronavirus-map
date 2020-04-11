@@ -1,9 +1,9 @@
 section {
-  &.section-left {
+  &.section {
     background-color: #e0e0e0;
     text-align: center;
   }
-  &.section-left:after {
+  &.section:after {
     content: "";
     opacity: 0.5;
     top: 0;
@@ -28,13 +28,16 @@ section {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 
-  .box:last-child{
+  .box:last-child {
     padding: 0;
   }
 
   .total-number {
     margin: 10px 0;
     font-size: 40px;
+    @media (min-width: 320px) and (max-width: 480px) {
+      font-size: 20px;
+    }
   }
 
   .countries {
@@ -43,22 +46,42 @@ section {
 
     .countries-item {
       list-style-type: none;
-      display: block;
       padding: 0 2.5em 10px 2.5em;
       border-bottom: 1px solid #bfbdbd;
       text-align: start;
+      display: flex;
+      align-items: center;
 
       .country-title {
         display: inline-block;
         padding-right: 5px;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+          font-size: 14px;
+        }
       }
+
       .country-cases {
         display: inline-block;
-        color: red;
+        @media (min-width: 320px) and (max-width: 480px) {
+          font-size: 12px;
+        }
       }
     }
   }
 
   .last-update {
+  }
+
+  &.section-left {
+    .country-cases {
+      color: red;
+    }
+  }
+
+  &.section-right {
+    .country-cases {
+      color: green;
+    }
   }
 }

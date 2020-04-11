@@ -758,8 +758,8 @@ if (!_.isEmpty(totals)) {
   
 const sortedCountries = _.sortBy(  
   !_.isEmpty(countries) ? countries : [],  
-  country => !country.cases  
-);  
+  country => country.cases  
+).reverse();  
 ```
 
 Replace `Section` return section with this block of code :
@@ -779,8 +779,7 @@ return (
             return (  
               <React.Fragment key={country.country}>  
  <ul className="countries-item">  
- <li  className="country-title"  
-  style={{ display: "inline-block" }}  
+ <li  className="country-title"    
                   >  
   {`${country.country} `}  
                   </li>  

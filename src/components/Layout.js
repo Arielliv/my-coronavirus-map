@@ -22,8 +22,9 @@ const Layout = ({ children, pageName }) => {
       <div className="wrapper">
         <Header />
         <div className="main-screen">
-          <Section />
           <main className="main">{children}</main>
+          <Section place="left" />
+          <Section place="right" />
         </div>
       </div>
     </>
