@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import { ScrollSync } from "react-scroll-sync";
 
 import "assets/stylesheets/application.scss";
 
@@ -15,19 +16,21 @@ const Layout = ({ children, pageName }) => {
   }
 
   return (
-    <>
-      <Helmet bodyAttributes={{ class: className }}>
-        <title>Gatsby Site</title>
-      </Helmet>
-      <div className="wrapper">
-        <Header />
-        <div className="main-screen">
-          <main className="main">{children}</main>
-          <Section place="left" />
-          <Section place="right" />
+    <ScrollSync>
+      <>
+        <Helmet bodyAttributes={{ class: className }}>
+          <title>Gatsby Site</title>
+        </Helmet>
+        <div className="wrapper">
+          <Header />
+          <div className="main-screen">
+            <main className="main">{children}</main>
+            <Section place="left" />
+            <Section place="right" />
+          </div>
         </div>
-      </div>
-    </>
+      </>
+    </ScrollSync>
   );
 };
 

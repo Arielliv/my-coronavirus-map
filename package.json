@@ -38,7 +38,8 @@
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1",
     "prettier-eslint-cli": "^5.0.0",
-    "react-odometerjs": "^2.1.1"
+    "react-odometerjs": "^2.1.1",
+    "react-scroll-sync": "^0.7.1"
   },
   "keywords": [
     "gatsby",

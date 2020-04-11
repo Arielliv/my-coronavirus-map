@@ -4,6 +4,7 @@ import "assets/stylesheets/application.scss";
 import { TotalsContext } from "../pages/index";
 import _ from "lodash";
 import "odometer/themes/odometer-theme-default.css";
+import { ScrollSyncPane } from "react-scroll-sync";
 import loadable from "@loadable/component";
 const Odometer = loadable(() => import("react-odometerjs"));
 
@@ -56,32 +57,33 @@ const Section = ({ place }) => {
             />
           </div>
         </div>
-        <div className="box countries">
-          <h3>Confirmed Countries recovered cases</h3>
-          {!_.isEmpty(sortedCountries) &&
-            sortedCountries.map(country => {
-              if (country.country !== "World") {
-                return (
-                  <React.Fragment key={country.country}>
-                    <ul className="countries-item">
-                      <li
-                        className="country-title"
-                      >
-                        {`${country.country} `}
-                      </li>
-                      <li className="country-cases">
-                        <Odometer
-                          value={country.recovered}
-                          duration={500}
-                          format="(,ddd)"
-                        />
-                      </li>
-                    </ul>
-                  </React.Fragment>
-                );
-              }
-            })}
-        </div>
+        <ScrollSyncPane>
+          <div className="box countries">
+            <h3>Confirmed Countries recovered</h3>
+
+            {!_.isEmpty(sortedCountries) &&
+              sortedCountries.map(country => {
+                if (country.country !== "World") {
+                  return (
+                    <React.Fragment key={country.country}>
+                      <ul className="countries-item">
+                        <li className="country-title">
+                          {`${country.country} `}
+                        </li>
+                        <li className="country-cases">
+                          <Odometer
+                            value={country.recovered}
+                            duration={500}
+                            format="(,ddd)"
+                          />
+                        </li>
+                      </ul>
+                    </React.Fragment>
+                  );
+                }
+              })}
+          </div>
+        </ScrollSyncPane>
         <div className="box last-update">
           <h3>Recovered Percentage</h3>
           <p>{`${totalRecoveredPercentage}%`}</p>
@@ -95,32 +97,31 @@ const Section = ({ place }) => {
             <Odometer value={totalCases} duration={500} format="(,ddd)" />
           </div>
         </div>
-        <div className="box countries">
-          <h3>Confirmed Countries cases</h3>
-          {!_.isEmpty(sortedCountries) &&
-            sortedCountries.map(country => {
-              if (country.country !== "World") {
-                return (
-                  <React.Fragment key={country.country}>
-                    <ul className="countries-item">
-                      <li
-                        className="country-title"
-                      >
-                        {`${country.country} `}
-                      </li>
-                      <li className="country-cases">
-                        <Odometer
-                          value={country.cases}
-                          duration={500}
-                          format="(,ddd)"
-                        />
-                      </li>
-                    </ul>
-                  </React.Fragment>
-                );
-              }
-            })}
-        </div>
+        <ScrollSyncPane>
+          <div className="box countries">
+            <h3>Confirmed Countries cases</h3>
+
+            {!_.isEmpty(sortedCountries) &&
+              sortedCountries.map(country => {
+                if (country.country !== "World") {
+                  return (
+                    <React.Fragment key={country.country}>
+                      <ul className="countries-item">
+                        <li className="country-title">{`${country.country} `}</li>
+                        <li className="country-cases">
+                          <Odometer
+                            value={country.cases}
+                            duration={500}
+                            format="(,ddd)"
+                          />
+                        </li>
+                      </ul>
+                    </React.Fragment>
+                  );
+                }
+              })}
+          </div>
+        </ScrollSyncPane>
         <div className="box last-update">
           <h3>Last Update</h3>
           <p>{!_.isEmpty(totals) ? `${d}` : "..."}</p>
