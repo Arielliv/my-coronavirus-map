@@ -51,6 +51,7 @@ section {
       text-align: start;
       display: flex;
       align-items: center;
+      justify-content: center;
 
       .country-title {
         display: inline-block;
@@ -64,7 +65,7 @@ section {
       .country-cases {
         display: inline-block;
         @media (min-width: 320px) and (max-width: 480px) {
-          font-size: 12px;
+          font-size: 16px;
         }
       }
     }

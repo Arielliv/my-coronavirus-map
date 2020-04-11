@@ -59,7 +59,7 @@ const Section = ({ place }) => {
         </div>
         <ScrollSyncPane>
           <div className="box countries">
-            <h3>Confirmed Countries recovered</h3>
+            <h3>Confirmed Recovered Cases by Country</h3>
 
             {!_.isEmpty(sortedCountries) &&
               sortedCountries.map(country => {
@@ -99,7 +99,7 @@ const Section = ({ place }) => {
         </div>
         <ScrollSyncPane>
           <div className="box countries">
-            <h3>Confirmed Countries cases</h3>
+            <h3>Confirmed Sick Cases by Country</h3>
 
             {!_.isEmpty(sortedCountries) &&
               sortedCountries.map(country => {
