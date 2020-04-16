@@ -406,9 +406,9 @@ If you followed along, you now have created your own Coronavirus map dashboard t
 
 So our [NovelCOVID API](https://github.com/NovelCOVID/API) is being updated every 10~ minutes. 
 
-There are many ways of implementing update mechanism for our map, we are gonna do pulling.
+There are many ways of implementing update mechanism for our map, we are gonna do polling.
 
-The first thing comes to my head when someone says `pulling mechanisem` is - **Interval**.
+The first thing comes to my head when someone says `polling mechanism` is - **Interval**.
 We gonna do it with java script basic method [`SetInterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 we will need to fire `mapEffect` function every duration we will choose, for developing and debuging we will use small duration of 2000 miliseconds.
