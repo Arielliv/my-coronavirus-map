@@ -141,7 +141,7 @@ Once that’s set, when the page reloads, the map should be centered in the midd
 
 ## Step 2: Fetching the Coronavirus data
 
-For our app, we’re going to use the  [NovelCOVID API](https://github.com/NovelCOVID/API). Particularly, we’re going to use the  [countries endpoint](https://corona.lmao.ninja/countries)  to fetch the list of our countries and the stats associated with them.
+For our app, we’re going to use the  [NovelCOVID API](https://github.com/NovelCOVID/API). Particularly, we’re going to use the  [countries endpoint](https://corona.lmao.ninja/v2/countries)  to fetch the list of our countries and the stats associated with them.
 
 For making requests, let's use  [axios](https://github.com/axios/axios) . If you want to use  [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)  or your own favorite request library, substitute that in for this step.
 
@@ -166,7 +166,7 @@ async function mapEffect({ leafletElement: map } = {}) {
     let response;
 
     try {
-      response = await axios.get(‘https://corona.lmao.ninja/countries’);
+      response = await axios.get(‘https://corona.lmao.ninja/v2/countries’);
     } catch(e) {
       console.log('Failed to fetch countries: ${e.message}', e);
       return;
@@ -527,7 +527,7 @@ In `index.js`  file, replace this block of code:
 let response;
 
     try {
-      response = await axios.get(‘https://corona.lmao.ninja/countries’);
+      response = await axios.get(‘https://corona.lmao.ninja/v2/countries’);
     } catch(e) {
       console.log(`Failed to fetch countries: ${e.message}`, e);
       return;
@@ -543,8 +543,8 @@ let countriesResponse, totalsResponse;
   
 try {  
   [countriesResponse, totalsResponse] = await Promise.all([  
-    axios.get("https://corona.lmao.ninja/countries"),  
-    axios.get("https://corona.lmao.ninja/all")  
+    axios.get("https://corona.lmao.ninja/v2/countries"),  
+    axios.get("https://corona.lmao.ninja/v2/all")  
   ]);  
 } catch (e) {  
   console.log(`Failed to fetch: ${e.message}`, e);  

@@ -38,8 +38,8 @@ const IndexPage = () => {
 
     try {
       [countriesResponse, totalsResponse] = await Promise.all([
-        axios.get("https://corona.lmao.ninja/countries"),
-        axios.get("https://corona.lmao.ninja/all")
+        axios.get("https://corona.lmao.ninja/v2/countries"),
+        axios.get("https://corona.lmao.ninja/v2/all")
       ]);
     } catch (e) {
       console.log(`Failed to fetch countries: ${e.message}`, e);
