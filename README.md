@@ -666,7 +666,7 @@ return (
 
 now if you suppose to see column in the left side of the map :
 
-![map with left section](https://drive.google.com/uc?export=view&id=1PTlBEyrbVPtSow0v9FXFBoSo4Mf3pl2J)
+![map with left section](images/map with left section.png)
 
 ## Let's start showing data
 
@@ -879,13 +879,13 @@ check that you didn't forget to import all the new packages !
 
 now you suppose to see our upgraded map 🎉
 
-![upgraded map](https://drive.google.com/uc?export=view&id=1gORMyAXyt-p-lv3K6Ld-ZInfO6m5KjC1)
+![upgraded map](images/map after upgrade.png)
 
 ## Step 7: Mobile view
 
-Becasue a Map app that can't be used at your phone is not realy a map app, lets add a quick style fixes so it would look great also in our phone :iphone:
+Becasue a Map app that can't be used at your phone is not really a map app, lets add a quick style fixes so it would look great also in our phone :iphone:
 
-![map on phone view](https://drive.google.com/uc?export=view&id=1PKlJkLYmqVJSu4TdTxTh_uNWeg7sr2vB)
+![map on phone view](images/ma on phone before.png)
 
 Let's refactor `application.scss`
 
@@ -913,7 +913,7 @@ Add this line of code inside `.main` class
 }
 ```
 
-![map on phone view](https://drive.google.com/uc?export=view&id=1cXdNn890BMeIFyFVTbPS1XtMYutQxCkm)
+![map on phone view](images/map on phone after.png)
 
 one last thing - we lost the hover effect , it's mobile and we don't have it anymore 
 
@@ -964,7 +964,7 @@ npm run build
 
 buy what happened ? Im sure your getting an error right now :
 
-![map on phone view](https://drive.google.com/uc?export=view&id=1heR1f9l_PlvNxwNMvCVBKi-7rrQVXNvf)
+![error in ssr](images/error in ssr.png)
 
  
  it turns out that using `Odometer` component doesn't support ssr, and `Gatsby` falis becuase of it. 
@@ -1032,7 +1032,7 @@ npm run build
 
 you'll get a successful message 
 
-![map on phone view](https://drive.google.com/uc?export=view&id=152zs2zez7GwCostBK2sru_ciclrXEwA8)
+![map on phone view](images/Screen Shot 2020-04-10 at 14.35.43.png)
 
 
 Now all left to do is to push your code to git , and go to Netlify
@@ -1040,24 +1040,24 @@ You will need to register and give it permissions to your repo in github.
 
 Then in your page on Netlify click on **new site from git** :
 
-![map on phone view](https://drive.google.com/uc?export=view&id=1a5n8rGNHs3atIpWqU2teTu-wvpn1uZGR)
+![map on phone view](images/Screen Shot 2020-04-10 at 14.38.53.jpeg)
 
 Then choose `Github` option:
 
-![map on phone view](https://drive.google.com/uc?export=view&id=1pniGK0zo7CREuQkYBRm9F-nzH1RcwvU3)
+![map on phone view](images/Screen Shot 2020-04-10 at 14.43.24.jpeg)
 
 Now you will have to gibe Netlify permission to your github account , then choose your coronavirus map repo:
 
-![map on phone view](https://drive.google.com/uc?export=view&id=1eyNUVrnedLVLaTo6Xbnn_gJg9k5KAm2A)
+![map on phone view](images/Screen Shot 2020-04-10 at 14.43.51.jpeg)
 
 Netlify will know that your project is a Gatsby project, so you won't need to change any configuration, just click **Deploy site**
 
-![map on phone view](https://drive.google.com/uc?export=view&id=1vOcMJIJu42s5S4QLSNB6gP89Boug6fU6)
+![map on phone view](images/Screen Shot 2020-04-10 at 14.44.10.jpeg)
 
 Now youll be redirected to page where you can see your build project status :
 
-![map on phone view](https://drive.google.com/uc?export=view&id=1zISsxl0si4auKIdVZG1jlztJlaFAFAiM)
-![map on phone view](https://drive.google.com/uc?export=view&id=1aR635VqB04TYRrwkMwvbpAKREOLrshaM)
+![map on phone view](images/Screen Shot 2020-04-10 at 14.44.36.png)
+![map on phone view](images/Screen Shot 2020-04-10 at 14.44.48.png)
 
 In the end you'll see that your project was successfully deployed  🎉
-![map on phone view](https://drive.google.com/uc?export=view&id=1ybUFY2fn6Yb0dgQ-EBvt_KRGBovkdAq5)
+![Image of Yaktocat](images/Screen Shot 2020-04-10 at 14.46.29.png)
