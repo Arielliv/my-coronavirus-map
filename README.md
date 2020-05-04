@@ -666,7 +666,7 @@ return (
 
 now if you suppose to see column in the left side of the map :
 
-![map with left section](images/map with left section.png)
+![map with left section]("images/map with left section.png")
 
 ## Let's start showing data
 
@@ -879,13 +879,13 @@ check that you didn't forget to import all the new packages !
 
 now you suppose to see our upgraded map 🎉
 
-![upgraded map](images/map after upgrade.png)
+![upgraded map]("images/map after upgrade.png")
 
 ## Step 7: Mobile view
 
 Becasue a Map app that can't be used at your phone is not really a map app, lets add a quick style fixes so it would look great also in our phone :iphone:
 
-![map on phone view](images/ma on phone before.png)
+![map on phone view]("images/ma on phone before.png")
 
 Let's refactor `application.scss`
 
@@ -913,7 +913,7 @@ Add this line of code inside `.main` class
 }
 ```
 
-![map on phone view](images/map on phone after.png)
+![map on phone view]("images/map on phone after.png")
 
 one last thing - we lost the hover effect , it's mobile and we don't have it anymore 
 
@@ -964,7 +964,7 @@ npm run build
 
 buy what happened ? Im sure your getting an error right now :
 
-![error in ssr](images/error in ssr.png)
+![error in ssr]("images/error in ssr.png")
 
  
  it turns out that using `Odometer` component doesn't support ssr, and `Gatsby` falis becuase of it. 
@@ -1032,7 +1032,7 @@ npm run build
 
 you'll get a successful message 
 
-![map on phone view](images/Screen Shot 2020-04-10 at 14.35.43.png)
+![map on phone view]("images/Screen Shot 2020-04-10 at 14.35.43.png")
 
 
 Now all left to do is to push your code to git , and go to Netlify
@@ -1040,19 +1040,19 @@ You will need to register and give it permissions to your repo in github.
 
 Then in your page on Netlify click on **new site from git** :
 
-![map on phone view](images/Screen Shot 2020-04-10 at 14.38.53.jpeg)
+![map on phone view]("images/Screen Shot 2020-04-10 at 14.38.53.jpeg")
 
 Then choose `Github` option:
 
-![map on phone view](images/Screen Shot 2020-04-10 at 14.43.24.jpeg)
+![map on phone view]("images/Screen Shot 2020-04-10 at 14.43.24.jpeg")
 
 Now you will have to gibe Netlify permission to your github account , then choose your coronavirus map repo:
 
-![map on phone view](images/Screen Shot 2020-04-10 at 14.43.51.jpeg)
+![map on phone view]("images/Screen Shot 2020-04-10 at 14.43.51.jpeg")
 
 Netlify will know that your project is a Gatsby project, so you won't need to change any configuration, just click **Deploy site**
 
-![map on phone view](images/Screen Shot 2020-04-10 at 14.44.10.jpeg)
+![map on phone view]("images/Screen Shot 2020-04-10 at 14.44.10.jpeg")
 
 Now youll be redirected to page where you can see your build project status :
 
