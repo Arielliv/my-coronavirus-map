@@ -1060,4 +1060,4 @@ Now youll be redirected to page where you can see your build project status :
 ![map on phone view]("./images/Screen Shot 2020-04-10 at 14.44.48.png")
 
 In the end you'll see that your project was successfully deployed  🎉
-![Image of Yaktocat]("./images/Screen Shot 2020-04-10 at 14.46.29.png")
+![Image of Yaktocat](./images/Screen Shot 2020-04-10 at 14.46.29.png)
