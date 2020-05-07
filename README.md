@@ -18,8 +18,7 @@ This workshop was insprired by - [How to create a Coronavirus (COVID-19) Dashboa
 # What are we going to build
 
 We’ll be putting together a mapping application that uses an API containing recent Coronavirus statistics and maps out the locations and impact each country is facing.
-![Coronavirus map dashboard demo](https://photos.app.goo.gl/qqFJWqTvkd1f79FY9)
-
+![Image of Yaktocat](images/finishedmap.png)
 On the map, we’ll show a marker for each country with the number of confirmed cases. On top of that, we’ll include a little popup tooltip that shows more in depth information.
 
 The map we’ll build will mostly look like the above, but will look a little simpler. We’ll utilize the [OpenStreetMap](https://www.openstreetmap.org/#map=7/31.438/35.074) public tileserver.
@@ -148,7 +147,7 @@ For making requests, let's use  [axios](https://github.com/axios/axios) . If you
 We’ll start by installing axios:
 
 ```shell
-npm install axios --save-dev
+npm install axios
 ```
 
 Once that installs, remember to restart your server.
@@ -156,7 +155,7 @@ Once that installs, remember to restart your server.
 Import the axios package at the top of our  `pages/index.js`  file:
 
 ```javascript
-import axios from 'axios;
+import axios from 'axios';
 ```
 
 Next we’ll make our request. Inside our  `mapEffect`  function, let’s try to make a request to the API endpoint:
@@ -166,7 +165,7 @@ async function mapEffect({ leafletElement: map } = {}) {
     let response;
 
     try {
-      response = await axios.get(‘https://corona.lmao.ninja/v2/countries’);
+      response = await axios.get(`https://corona.lmao.ninja/v2/countries`);
     } catch(e) {
       console.log('Failed to fetch countries: ${e.message}', e);
       return;
@@ -345,7 +344,7 @@ We also want to add a bit of CSS here so that we can make sure our markers show 
     position: absolute;
     bottom: -.6em;
     left: 50%;
-    content: ‘’;
+    content: '';
     width: 1.4em;
     height: 1.4em;
     background-color: $blue-grey-900;
@@ -529,7 +528,7 @@ let response;
     try {
       response = await axios.get(‘https://corona.lmao.ninja/v2/countries’);
     } catch(e) {
-      console.log(`Failed to fetch countries: ${e.message}`, e);
+      console.log('Failed to fetch countries: ${e.message}', e);
       return;
     }
 
@@ -599,7 +598,7 @@ In `Layout` component, replace `return` section with this block of code :
 </>
 ```
 
-In `application.css` file add this block of style code:
+In `application.scss` file add this block of style code:
 
 ```css
 .wrapper {  
@@ -867,7 +866,7 @@ section {
 
 In `__components.scss` file add an import :
 ```scss
-@import "map";
+@import "section";
 ```
 In `Section.js` add these imports:
 
@@ -910,6 +909,18 @@ Add this line of code inside `.main` class
 ```scss
 @media (min-width: 320px) and (max-width: 480px) {  
   height: 60vh;  
+}
+```
+
+Let's refactor `_map.scss`
+
+under `.icon-marker` add 
+
+```scss
+&.mobile-active {
+      @media (min-width: 320px) and (max-width: 480px) {
+        display: block;
+      }
 }
 ```
 
